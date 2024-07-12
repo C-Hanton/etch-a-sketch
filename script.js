@@ -21,8 +21,5 @@ for (let count = 1; count <= 256; count++) {
         newDiv.style.backgroundColor = 'blue'; // Change background color on mouseover
     });
 
-    // Optional: Add event listener for mouseout to revert the background color
-    newDiv.addEventListener('mouseout', () => {
-        newDiv.style.backgroundColor = 'lightblue'; // Revert to original background color on mouseout
-    });
+    
 }
