@@ -4,12 +4,12 @@
     width: 100%; /* Adjust width as needed */
     max-width: 600px; /* Optional: set a max width for the grid */
     margin: 0 auto; /* Center the grid horizontally */
-    border: 2px, solid, gray;
+    border: 1px solid gray; /* Adjust border style */
 }
 
 .grid {
-    width: calc(100% / 16); /* Each item will take up 1/16th of the container's width */
-    padding-top: calc(100% / 16); /* Maintain a square aspect ratio */
+    width: calc(100% / var(--num-columns)); /* Calculate width based on number of columns */
+    padding-top: calc(100% / var(--num-columns)); /* Maintain a square aspect ratio */
     position: relative; /* Required for the inner content */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     border: 1px solid #ddd; /* Optional: add a border for better visibility */
@@ -29,10 +29,11 @@
 }
 
 button {
-    margin: 0 auto;
+    margin: 10px auto; /* Adjust margin for button */
 }
 
 body {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center content horizontally */
 }
