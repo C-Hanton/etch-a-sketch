@@ -20,7 +20,7 @@ function createNewGrid(numColumns) {
     containerDiv.style.setProperty('--num-columns', numColumns);
 
     const totalCells = numColumns * numColumns; // Calculate total cells based on numColumns
-    if (numColumns < 100){
+    if (numColumns <= 100 && numColumns > 0){
     for (let count = 1; count <= totalCells; count++) {
         const newDiv = document.createElement('div');
         newDiv.classList.add('grid');
@@ -38,7 +38,7 @@ function createNewGrid(numColumns) {
             newDiv.style.backgroundColor = randomColor() // Change background color on mouseover
         });
     }
-}else if (numColumns < 0 ) {
+}else if (numColumns < 1 ) {
     alert("Please input a number between 1 and 100")
 } else {
     alert("Please input a number between 1 and 100")
