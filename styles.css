@@ -1,15 +1,18 @@
-div#container {
-    display:flex;
-    width: 100%;
-    flex-wrap:wrap;
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; /* Adjust width as needed */
+    max-width: 600px; /* Optional: set a max width for the grid */
+    margin: 0 auto; /* Center the grid horizontally */
 }
 
-div.grid {
+.grid {
     width: calc(100% / 16); /* Each item will take up 1/16th of the container's width */
     padding-top: calc(100% / 16); /* Maintain a square aspect ratio */
     position: relative; /* Required for the inner content */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     border: 1px solid #ddd; /* Optional: add a border for better visibility */
+    background-color: lightblue; /* Default background color */
 }
 
 .grid-content {
@@ -23,4 +26,3 @@ div.grid {
     justify-content: center;
     font-size: 14px; /* Adjust text size as needed */
 }
-
