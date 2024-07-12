@@ -18,5 +18,7 @@ containerDiv.setAttribute("id", "container");
 for(let count = 1; count <= 256 ; count ++){
     //console.log(count) - Check iteration number - interates to 256
     newDiv = document.createElement("div");
+    newDiv.classList.add("grid");
     containerDiv.append(newDiv);
 }
+
