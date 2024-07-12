@@ -38,7 +38,9 @@ function createNewGrid(numColumns) {
             newDiv.style.backgroundColor = randomColor() // Change background color on mouseover
         });
     }
-}else {
+}else if (numColumns < 0 ) {
+    alert("Please input a number between 1 and 100")
+} else {
     alert("Please input a number between 1 and 100")
 }
 }
