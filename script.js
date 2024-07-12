@@ -19,6 +19,16 @@ for(let count = 1; count <= 256 ; count ++){
     //console.log(count) - Check iteration number - interates to 256
     newDiv = document.createElement("div");
     newDiv.classList.add("grid");
+    
+    containerDiv.append(newDiv);
+
+    const content = document.createElement('div');
+    content.classList.add('grid-content');
+    content.textContent = count; // Optional: number each grid item
+    
+    newDiv.appendChild(content);
     containerDiv.append(newDiv);
 }
+
+
 
