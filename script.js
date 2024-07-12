@@ -35,7 +35,7 @@ function createNewGrid(numColumns) {
 
         // Add event listener for mouseover event
         newDiv.addEventListener('mouseover', () => {
-            newDiv.style.backgroundColor = 'blue'; // Change background color on mouseover
+            newDiv.style.backgroundColor = randomColor() // Change background color on mouseover
         });
     }
 }else {
@@ -49,3 +49,14 @@ createNewGrid(16);
 // Example: Call deleteGrid function when a button is clicked
 const resetBtn = document.getElementById("reset");
 resetBtn.addEventListener("click", deleteGrid);
+
+// for random color on mouseover
+function randomColor() {
+    let color = [];
+    for (let i = 0; i < 3; i++) {
+      color.push(Math.floor(Math.random() * 256));
+    }
+    return 'rgb(' + color.join(', ') + ')';
+  } 
+
+  
