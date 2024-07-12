@@ -40,4 +40,5 @@ function deleteGrid() {
     while (containerDiv.firstChild) {
         containerDiv.removeChild(containerDiv.firstChild);
     }
+    const userInput = prompt("Please enter numbe of columns between 1-100")
 }
