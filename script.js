@@ -20,7 +20,7 @@ function createNewGrid(numColumns) {
     containerDiv.style.setProperty('--num-columns', numColumns);
 
     const totalCells = numColumns * numColumns; // Calculate total cells based on numColumns
-
+    if (numColumns < 100){
     for (let count = 1; count <= totalCells; count++) {
         const newDiv = document.createElement('div');
         newDiv.classList.add('grid');
@@ -28,7 +28,7 @@ function createNewGrid(numColumns) {
         // Add optional content for visibility
         const content = document.createElement('div');
         content.classList.add('grid-content');
-        content.textContent = count; // Optional: number each grid item
+        
         
         newDiv.appendChild(content);
         containerDiv.append(newDiv);
@@ -38,6 +38,9 @@ function createNewGrid(numColumns) {
             newDiv.style.backgroundColor = 'blue'; // Change background color on mouseover
         });
     }
+}else {
+    alert("Please input a number between 1 and 100")
+}
 }
 
 // Example: Initial creation of 16x16 grid
