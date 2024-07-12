@@ -23,3 +23,8 @@ for (let count = 1; count <= 256; count++) {
 
     
 }
+const resetBtn = document.getElementById("reset")
+
+    resetBtn.addEventListener("click", () => {
+        console.log("click");
+    })
