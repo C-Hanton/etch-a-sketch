@@ -1,34 +1,28 @@
+// Create a main container div and set its ID
+const containerDiv = document.createElement('div');
+containerDiv.setAttribute('id', 'container');
+document.body.append(containerDiv);
 
-
-// Create a single div
-
-containerDiv = document.createElement("div");
-document.body.append(containerDiv)
-
-// set container as ID for main container
-containerDiv.setAttribute("id", "container");
-
-//create one new div in container
-
-
-//newDiv = document.createElement("div");
-//containerDiv.append(newDiv);
-
-// iterate 256 times + generate a div for each iteration
-for(let count = 1; count <= 256 ; count ++){
-    //console.log(count) - Check iteration number - interates to 256
-    newDiv = document.createElement("div");
-    newDiv.classList.add("grid");
+// Iterate 256 times to create a 16x16 grid
+for (let count = 1; count <= 256; count++) {
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('grid');
     
-    containerDiv.append(newDiv);
-
+    // Add optional content for visibility
     const content = document.createElement('div');
     content.classList.add('grid-content');
     content.textContent = count; // Optional: number each grid item
     
     newDiv.appendChild(content);
     containerDiv.append(newDiv);
+
+    // Add event listener for mouseover event
+    newDiv.addEventListener('mouseover', () => {
+        newDiv.style.backgroundColor = 'blue'; // Change background color on mouseover
+    });
+
+    // Optional: Add event listener for mouseout to revert the background color
+    newDiv.addEventListener('mouseout', () => {
+        newDiv.style.backgroundColor = 'lightblue'; // Revert to original background color on mouseout
+    });
 }
-
-
-
